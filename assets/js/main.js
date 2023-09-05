@@ -1,4 +1,4 @@
-
+const timeEL = document.querySelector(".time");
 
 setInterval(countdown, 1000)
 function countdown(){
@@ -10,4 +10,6 @@ function countdown(){
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     console.log(hours + "h "
     + minutes + "m " + seconds + "s ");
+    timeEL.innerHTML = `<h4> ${hours}  h 
+     ${minutes}  m   ${seconds}  s </h4>`
 }
